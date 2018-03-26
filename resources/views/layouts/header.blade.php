@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Twitter Bootstrap shopping cart</title>
+    <title>Nexus Corporation Web App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -59,7 +59,7 @@ Lower Header Section
 <div class="row">
 	<div class="span4">
 	<h1>
-	<a class="logo" href=""><span>Twitter Bootstrap ecommerce template</span> 
+	<a class="logo" href=""><span>Nexus Corporation Web App</span> 
 		<img src="{{ asset('public/assets/img/logo-bootstrap-shoping-cart.png') }}" alt="bootstrap sexy shop">
 	</a>
 	</h1>

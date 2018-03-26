@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('product_size');
             $table->string('product_color');
             $table->string('product_image');
+            $table->longText('product_description');
             $table->enum('is_active',['0', '1'])->default('1'); 
             $table->timestamps();
             $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('cascade');

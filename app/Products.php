@@ -18,6 +18,7 @@ class Products extends Model
     protected $product_size;
     protected $product_color;
     protected $product_image;
+    protected $product_description;
     protected $created_at;
     protected $updated_at;
     protected $is_active;
