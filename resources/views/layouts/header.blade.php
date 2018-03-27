@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="alignR">
                             
-				<a class="active" href="index.html"> <span class="icon-home"></span> Home</a> 
+				<a class="active" href="{{ url('/') }}"> <span class="icon-home"></span> Home</a> 
 				@if (Route::has('login'))
                                 @auth
                                 <a href="#"><span class="icon-user"></span> My Account</a> 
@@ -42,7 +42,7 @@
                                 @endauth
                                  @endif
 				
-				<a href=""><span class="icon-shopping-cart"></span> 0 Item(s) - <span class="badge badge-warning"> $448.42</span></a>
+				 @if(Session::get('cart')) <a href="{{ route('product.shopingCart') }}"><span class="icon-shopping-cart"></span> {{Session::has('cart')?Session::get('cart')->totalQty :' '}} Item(s) - <span class="badge badge-warning"> ${{Session::has('cart')?Session::get('cart')->totalPrice :' '}}</span></a>@endif
 			
                         
                         </div>
@@ -89,27 +89,7 @@ Lower Header Section
 			<ul class="nav">
 			  <li class="active"><a href="{{ url('/') }}">Home	</a></li>
 			  
-                          <ul class="nav pull-right" style="float: right;">
-			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
-				<div class="dropdown-menu">
-				<form class="form-horizontal loginFrm">
-				  <div class="control-group">
-					<input type="text" class="span2" id="inputEmail" placeholder="Email">
-				  </div>
-				  <div class="control-group">
-					<input type="password" class="span2" id="inputPassword" placeholder="Password">
-				  </div>
-				  <div class="control-group">
-					<label class="checkbox">
-					<input type="checkbox"> Remember me
-					</label>
-					<button type="submit" class="shopBtn btn-block">Sign in</button>
-				  </div>
-				</form>
-				</div>
-			</li>
-			</ul>
+                         
                           @if (Route::has('login'))
                                 @auth
                                 @guest

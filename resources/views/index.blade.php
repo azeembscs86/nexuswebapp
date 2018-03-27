@@ -32,7 +32,7 @@
 New Products
 -->
 	<div class="well well-small">
-	<h3><a class="btn btn-mini pull-right" href="products.html" title="View more">VIew More<span class="icon-plus"></span></a> Products  </h3>
+	<h3><a class="btn btn-mini pull-right" href="" title="View more">VIew More<span class="icon-plus"></span></a> Products  </h3>
 	<hr class="soften"/>
 		
 		<div class="row-fluid">
@@ -41,12 +41,12 @@ New Products
                       <li class="span4" style="width: 30.914894%;margin-left:none">
 			  <div class="thumbnail">
 				 
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<a href="product_details.html"><img src="{{ asset('public/'.$product->product_image) }}" alt=""></a>
+				<a class="zoomTool" href="" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<a href=""><img src="{{ asset('public/'.$product->product_image) }}" alt=""></a>
 				<div class="caption cntr">
 					<p>{{$product->product_name}}</p>
 					<p><strong> ${{$product->product_price}}</strong></p>
-					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
+					<h4><a class="shopBtn" href="{{route('product.addToCart',['id'=>$product->product_id])}}" title="add to cart"> Add to cart </a></h4>
 					<div class="actionList">
 						<a class="pull-left" href="#">Add to Wish List </a> 
 						<a class="pull-left" href="#"> Add to Compare </a>

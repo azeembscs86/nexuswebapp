@@ -13,7 +13,12 @@
 
 
 
-Route::get('/','ProductsController@index');  
+Route::get('/','ProductsController@index')->name('product');  
+
+Route::get('/add-to-cart/{id}','ProductsController@addToCart')->name('product.addToCart');  
+
+Route::get('/shoping-cart','ProductsController@getShopingCart')->name('product.shopingCart');  
+
 
 Auth::routes();
 
